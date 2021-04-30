@@ -6,7 +6,8 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 const port = 3000;
-const User = require('./models/users.js')
+const User = require('./models/users.js');
+const session = require('express-session');
 
 // MIDDLEWARE
 // body parser middleware
@@ -14,6 +15,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // static files middleware
 app.use(express.static('public'))
+app.use(session({
+    secret: "feedmeseymour", //some random string
+    resave: false,
+    saveUninitialized: false
+}));
 
 
 // CONTROLLERS
