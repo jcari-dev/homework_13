@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user.js');
+const User = require('../models/users.js');
 
 //Route to new
 router.get('/new', (req, res) => {
@@ -9,7 +9,7 @@ router.get('/new', (req, res) => {
 
 //Create new user
 
-router.get('/users/new', (req, res) => {
+router.post('/', (req, res) => {
     res.send('got chu');
 })
 

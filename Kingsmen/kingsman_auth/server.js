@@ -6,7 +6,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 const bcrypt = require('bcrypt');
 const port = 3000;
-const User = require('./models/user.js')
+const User = require('./models/users.js')
 
 // MIDDLEWARE
 // body parser middleware
