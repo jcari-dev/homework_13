@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    Name: String,
-    Password: String,
-    Messages: []
+    username: String,
+    password: String,
+    messages: Array
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
