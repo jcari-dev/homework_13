@@ -13,9 +13,12 @@ router.post('/', (req, res) => {
         if (req.body.password === checkUser[0].password) {
             res.redirect('/room')
         } else {
-            res.send('login failed')
+            res.redirect('/')
         }
     })
 })
 
 module.exports = router;
+
+
+NOT COMPLETED WILL RESUBMIT
